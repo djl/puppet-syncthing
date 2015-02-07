@@ -1,0 +1,17 @@
+{
+  "name": "djl-syncthing",
+  "version": "0.0.1",
+  "author": "djl",
+  "summary": "Install Syncthing",
+  "license": "ISC",
+  "source": "https://github.com/djl/puppet-syncthing.git",
+  "project_page": "https://github.com/djl/puppet-syncthing",
+  "issues_url": "https://github.com/djl/puppet-syncthing/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.2.0"
+    },
+  ]
+}
+
