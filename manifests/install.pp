@@ -1,8 +1,10 @@
 # == Class: syncthing::install
 class syncthing::install() inherits syncthing::params {
-  user { $syncthing::user:
-    ensure => present,
-    shell  => $syncthing::user_shell,
+  if ($syncthing::manage_user) {
+      user { $syncthing::user:
+        ensure => present,
+        shell  => $syncthing::user_shell,
+      }
   }
 
   package { 'syncthing':
