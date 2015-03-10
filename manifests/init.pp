@@ -19,6 +19,12 @@
 # [*pid_file*]
 #   The pidfile for the Syncthing process
 #
+# [*nice_level*]
+#   The nice priority for the Syncthing process
+#
+# [*daemon_args*]
+#   Any extra arguments to be passed to the Syncthing daemon
+#
 # === Examples
 #
 #  class { 'syncthing':
@@ -31,6 +37,8 @@ class syncthing (
   $manage_user = $syncthing::params::manage_user,
   $data_dir    = $syncthing::params::data_dir,
   $pid_file    = $syncthing::params::pid_file,
+  $nice_level  = $syncthing::params::nice_level,
+  $daemon_args = $syncthing::params::daemon_args,
 ) inherits syncthing::params {
 
   validate_bool($manage_user)

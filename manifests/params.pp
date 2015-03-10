@@ -5,4 +5,6 @@ class syncthing::params {
   $manage_user = true
   $data_dir    = '/var/lib/syncthing'
   $pid_file    = '/var/run/syncthing/syncthing.pid'
+  $nice_level  = 0
+  $daemon_args = 0
 }
