@@ -4,6 +4,7 @@ class syncthing::install() inherits syncthing::params {
       user { $syncthing::user:
         ensure => present,
         shell  => $syncthing::user_shell,
+        home   => $syncthing::data_dir,
       }
   }
 
